@@ -1,0 +1,3 @@
+Next step is to create a SparkSession and sparkContext.
+While creating sparksession we need to mention the mode of execution, application name.
+ Below is the snippet to create the same.
