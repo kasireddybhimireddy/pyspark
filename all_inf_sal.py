@@ -20,7 +20,6 @@ df.createOrReplaceTempView("emp")
 spark.sql(""" select max(salary) as ms from emp """).show()
 
 print(df.agg(max("salary").alias("max_salary")).collect()[0]["max_salary"])
-#print(df.agg(max("salary")))
 
 
 
