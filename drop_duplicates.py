@@ -22,6 +22,14 @@ df_row_number=spark.sql("""select *,row_number() over (partition by emp_id order
 df_row_number2=df_row_number.filter(col("rownumber") ==1).drop("rownumber")
 df_row_number2.show()
 print(df_row_number2.count())
+
+#df=spark.createDataFrame(data,columns)
+#df.distinct().display()
+#if use select along with distinct lost one coloumn
+#df.select("emp_id","emp_name").distinct().display()
+#df.dropDuplicates().display()
+#df.dropDuplicates(['emp_id','emp_name']).display()
+
 spark.stop()
 
 
